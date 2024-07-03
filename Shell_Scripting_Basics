@@ -21,6 +21,26 @@ do
 echo "$i"
 done
 
+AWS Resource Check
+
+#!/bin/bash
+#This file is to list AWS resources
+
+set -x
+
+#To check S3 bucket
+echo "Please find the list of S3 Buckets"
+aws s3 ls > resourceTemplate
+
+#To Check Ec2 list
+echo "Please find the list of EC2 instances" 
+aws ec2 describe-instances | jq .Reservations[].Instances[].InstanceId >> resourceTemplate
+#aws ec2 describe-instances
+
+#To check IAM users
+echo "Please find the IAM user list"
+aws iam list-users | jq .Users[].UserId >> resourceTemplate
+#aws iam list-users
 Shell Script for calculate number divisible by 3 and 5 and not divisible by 15:
 
 #!/bin/bash
