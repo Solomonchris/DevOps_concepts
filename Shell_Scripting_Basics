@@ -38,7 +38,6 @@ done
 
 Shell script to calculate wordcount for a word:
 
-ubuntu@ip-172-31-10-202:~$ cat wordcount.sh 
 #!/bin/bash
 #to get the number of S and O in below strings
 set -x
