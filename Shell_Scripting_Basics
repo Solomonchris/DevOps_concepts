@@ -1,0 +1,48 @@
+Addition of 02 numbers:
+
+#!/bin/bash
+
+
+# Addition of two number
+# Name: Solomon
+#
+
+read -p "Enter first number: " a
+read -p "Enter second number: " b
+
+addition=`expr $a + $b`
+echo "The addition of numbers $a and $b is: " $addition
+
+For loop sample:
+
+max=10
+for i in `seq 2 $max`
+do
+echo "$i"
+done
+
+Shell Script for calculate number divisible by 3 and 5 and not divisible by 15:
+
+#!/bin/bash
+
+##Number divisible by 3
+#Number divisible by 5
+#Number not divisible by 15
+
+for i in {0..100}; do
+if ([ `expr $i % 3` == 0 ] || [ `expr $i % 5` == 0 ]) && [ `expr $i % 15` != 0 ];
+then
+        echo $i
+fi;
+done
+
+Shell script to calculate wordcount for a word:
+
+ubuntu@ip-172-31-10-202:~$ cat wordcount.sh 
+#!/bin/bash
+#to get the number of S and O in below strings
+set -x
+a=mississippi
+b=solomon
+grep -o "s" <<<"$a" | wc -l
+grep -o "o" <<<"$b" | wc -l
